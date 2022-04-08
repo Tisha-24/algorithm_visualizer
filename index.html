@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Data Structures Visualization</title>
+   <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Data Structures Vizualization."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://graphicalstructure.org/" />
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Data Structures Visualization">
+<meta property="og:description" content="Data Structures Visualization.">
+<meta property="og:url" content="https://graphicalstructure.org">
+<meta property="og:site_name" content="Data Structures Visualization">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data Structures Visualization">
+<meta name="twitter:description" content="Data Structures Visualization.">
+<script type="application/ld+json" class="rank-math-schema">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "EducationalOrganization",
+            "@id": "https://graphicalstructure.org/#organization",
+            "name": "Data Structures Visualization",
+            "url": "https://graphicalstructure.org",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://graphicalstructure.org/Playground/logo1.png"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://graphicalstructure.org/#website",
+            "url": "https://graphicalstructure.org",
+            "name": "Data Structures Visualization",
+            "publisher": {
+                "@id": "https://graphicalstructure.org#organization"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://blog.graphicalstructure.org/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "CollectionPage",
+            "@id": "https://graphicalstructure.org/#webpage",
+            "url": "https://graphicalstructure.org/",
+            "name": "Data Structures Visualization",
+            "about": {
+                "@id": "https://graphicalstructure.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://graphicalstructure.org/#website"
+            },
+            "inLanguage": "en-US"
+        }
+    ]
+}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185226808178747" crossorigin="anonymous"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+ * {
+	 box-sizing: border-box;
+	 font-weight: normal;
+}
+
+ body {
+	 color: #555;
+	 background: #fff;
+	 text-align: center;
+	 font-family: 'segoe ui';
+	 padding: 1em;
+}
+ h1 {
+	 font-size: 2.2em;
+}
+ .flip {
+	 position: relative;
+}
+ .flip > .front, .flip > .back {
+	 display: block;
+	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	 transition-duration: 1s;
+	 transition-property: transform, opacity;
+}
+ .flip > .front {
+	 transform: rotateY(0deg);
+}
+ .flip > .back {
+	 position: absolute;
+	 opacity: 0;
+	 top: 0px;
+	 left: 0px;
+	 width: 100%;
+	 height: 100%;
+	 transform: rotateY(-180deg);
+}
+ .flip:hover > .front {
+	 transform: rotateY(180deg);
+}
+ .flip:hover > .back {
+	 opacity: 1;
+	 transform: rotateY(0deg);
+}
+ .flip.flip-vertical > .back {
+	 transform: rotateX(-180deg);
+}
+ .flip.flip-vertical:hover > .front {
+	 transform: rotateX(180deg);
+}
+ .flip.flip-vertical:hover > .back {
+	 transform: rotateX(0deg);
+}
+ .flip {
+	 position: relative;
+	 display: inline-block;
+	 margin-right: 2px;
+	 margin-bottom: 1em;
+	 width: 400px;
+}
+ .flip > .front, .flip > .back {
+	 display: block;
+	 color: coral;
+	 width: inherit;
+	 background-size: cover !important;
+	 background-position: center !important;
+	 height: 220px;
+	 padding: 1em 2em;
+	 background: #313131;
+	 border-radius: 10px;
+}
+ .flip > .front p, .flip > .back p {
+	 font-size: 0.9125rem;
+	 line-height: 160%;
+	 color: #999;
+}
+ .text-shadow {
+
+position: absolute;
+
+
+
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- horizontal
+
+<h4>Horizontal Flip</h4>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">MOUNTAIN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">LAKE</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">OCEAN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+vertical -->
+<div style="text-align: center;">
+<h1 onClick="location.href='/'" style="cursor:pointer; font-size:60px; font-weight: 900; font-family: 'Roboto', sans-serif;">Graphical Structure</h1>
+</div>
+<section id="mainbody">
+<!--<div class="flip flip-vertical" onclick="location.href='./Conway';">
+   <div class="front" style="text-align: center;" >
+      <h1 class="text-shadow">Conway's Game of Life</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/Conway.png)">-->
+      
+      
+   </div>
+ </div>
+
+<div class="flip flip-vertical" onclick="location.href='./Array';">
+
+    <div class="front">
+       <h1 class="text-shadow">Array</h1>
+    </div>
+    <div class="back"  style="background-image: url(thumbnails/array.png)">
+    
+    </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href='./SortBars';">
+
+   <div class="front">
+      <h1 class="text-shadow">Sorting (Bar Graph)</h1>
+   </div>
+   <div class="back"  style="background-image: url(thumbnails/bar.png)">
+   
+   </div>
+</div>
+
+
+
+<div class="flip flip-vertical" onclick="location.href='./LinkedList';">
+    <div class="front">
+       <h1 class="text-shadow">Linked List</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/LL.png)">
+
+    </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href='./Stack';" >
+    <div class="front" >
+       <h1 class="text-shadow">Stack</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/stackll.png)">
+       
+       
+    </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href='./Queue';">
+  <div class="front" >
+     <h1 class="text-shadow">Queue</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/queuell.png)">
+     
+     
+  </div>
+</div>
+
+
+
+<div class="flip flip-vertical" onclick="location.href='./BST';" >
+    <div class="front" >
+       <h1 class="text-shadow">Binary Search Tree</h1>
+    </div>
+    <div class="back" style="background-image: url(thumbnails/BST.png)">
+       
+       
+    </div>
+</div>
+
+
+<!--<div class="flip flip-vertical" onclick="location.href='./AVL';">
+  <div class="front" >
+     <h1 class="text-shadow">AVL Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/avl.png)">-->
+     
+     
+  </div>
+</div>
+
+<!--<div class="flip flip-vertical" onclick="location.href='./Splay';">
+  <div class="front" >
+     <h1 class="text-shadow">Splay Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/splay.png)">-->
+     
+     
+  </div>
+<!--</div><div class="flip flip-vertical" onclick="location.href='./RedBlack';">
+  <div class="front" >
+     <h1 class="text-shadow">Red Black Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/rb.png)">-->
+     
+     
+  </div>
+</div><div class="flip flip-vertical" onclick="location.href='./BTree';">
+  <div class="front" >
+     <h1 class="text-shadow">B Tree</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/btree.png)">
+     
+     
+  </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href='./Heap';">
+  <div class="front" >
+     <h1 class="text-shadow">Max Heap</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/heap.png)">
+     
+     
+  </div>
+</div>
+
+
+<div class="flip flip-vertical" onclick="location.href='./MinHeap';">
+   <div class="front" >
+      <h1 class="text-shadow">Min Heap</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/minheap.png)">
+      
+      
+   </div>
+ </div>
+ 
+
+
+<div class="flip flip-vertical" onclick="location.href='./Priorityqueue';">
+  <div class="front" >
+     <h1 class="text-shadow">Priority Queue</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/pq.png)">
+     
+     
+  </div>
+</div><div class="flip flip-vertical" onclick="location.href='./Graph';">
+  <div class="front" >
+     <h1 class="text-shadow">Graph</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/graph.png)">
+     
+     
+  </div>
+<!--</div><div class="flip flip-vertical" onclick="location.href='./Trie';">
+  <div class="front" >
+     <h1 class="text-shadow">Trie</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/trie.png)">-->
+     
+     
+  </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href='./TOH';">
+   <div class="front" style="text-align: center;" >
+      <h1 class="text-shadow">Tower of Hanoi problem</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/toh.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href='./FactRecursion';">
+   <div class="front" style="text-align: center;" >
+      <h1 class="text-shadow">Factorial (Recursion)</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/placehold.png)">
+      
+      
+   </div>
+ </div>
+
+
+
+<!--<div class="flip flip-vertical" onclick="location.href='./ShuntingYard';">
+  <div class="front" >
+     <h1 class="text-shadow">Shunting-Yard Algorithm</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/sy.png)">
+     
+     
+  </div>
+</div>
+
+<div class="flip flip-vertical" onclick="location.href='./Huffman';">
+   <div class="front" >
+      <h1 class="text-shadow">Huffman Coding</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/huff.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href='./naiveSM';">
+   <div class="front" >
+      <h1 class="text-shadow">Naïve String Matching Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/nsm.png)">
+      
+      
+   </div>
+ </div>
+
+
+<div class="flip flip-vertical" onclick="location.href='./RabinKarp';">
+   <div class="front" >
+      <h1 class="text-shadow">Rabin-Karp Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/RK.png)">
+      
+      
+   </div>
+ </div>
+
+ <div class="flip flip-vertical" onclick="location.href='./KnuthMorris';">
+   <div class="front" >
+      <h1 class="text-shadow">Knuth-Morris-Pratt</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/KMP.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href='./BoyerMoore';">
+   <div class="front" >
+      <h1 class="text-shadow">Boyer-Moore Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/Boyer.png)">
+      
+      
+   </div>
+ </div>-->
+
+
+<div class="flip flip-vertical" onclick="location.href='./DP';">
+  <div class="front" style="text-align: center;" >
+     <h1 class="text-shadow">Dynamic<br>Programming</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/dp.png)">
+     
+     
+  </div>
+</div>
+
+<!--<div class="flip flip-vertical" onclick="location.href='./CORDIC';">
+   <div class="front" style="text-align: center;" >
+      <h1 class="text-shadow">CORDIC<br>Algorithm</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/volder.png)">-->
+      
+      
+   </div>
+ </div>
+
+
+<div class="flip flip-vertical" onclick="location.href='./nQueen';">
+   <div class="front" style="text-align: center;" >
+      <h1 class="text-shadow">N Queen | Backtrack</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/nqueen.png)">
+      
+      
+   </div>
+ </div>
+
+
+ <div class="flip flip-vertical" onclick="location.href='./Sudoku';">
+   <div class="front" style="text-align: center;" >
+      <h1 class="text-shadow">Sudoku | Backtrack</h1>
+   </div>
+   <div class="back" style="background-image: url(thumbnails/sudoku.png)">
+      
+      
+   </div>
+ </div>
+
+
+
+<!--<div class="flip flip-vertical" onclick="location.href='./TreeAdjustmentAlgorithm';">
+  <div class="front" style="text-align: center;" >
+     <h1 class="text-shadow">Tree Adjustment Algorithm<br>(Explaination)</h1>
+  </div>
+  <div class="back" style="background-image: url(thumbnails/adjust.png)">-->
+     
+     
+  </div>
+</div>
+
+</section>
+</body>
+</html> 
