@@ -1,14 +1,12 @@
-
 body
 {
 	padding:0px;
 	margin:0px;
-  width: 4000px;
-  height : 1000px;
+
+  height: 5100px;
+  width: 50in;
 
   font-family: segoe ui;
-
-  user-select: none;
   
 
 
@@ -19,45 +17,27 @@ body
   
    height: 80px;
   
+   padding: 0.5em;  
   
-  
-   background-color:rgba(40, 40, 40); 
+   background-color:rgba(0, 0, 0, 0.842); 
   
     font-family: Segoe UI;
     
     position: absolute;
-  top:0;
-  left:0;
+    margin-top: 135px;
     border-radius: 80px;
-    z-index: 1;
 
+    transition-duration: 300ms;
+    
    
+    
     }
-
-
-    .pointers { 
-    
-      width: 80px;
-    
-     height: 80px;
-    
-    
-     background-color:rgba(255, 120, 80, 0.842); 
-    
-      font-family: Segoe UI;
-      
-      position: absolute;
-   
-      border-radius: 80px;
-  
-     
-      }
 
     .arrayd { 
     
     width: 70px;
   
-   height: 70px;
+   height: 90px;
   
    padding: 0.5em;  
   
@@ -75,17 +55,11 @@ body
    font-size: 150%;
     
   transition-duration : 100ms;
- 
     }
 
     .arrayitem {
 
 font-size: 90%;
-
-position: absolute;
-top: 0;
-left: 0;
-z-index: 2;
 
     }
 
@@ -118,18 +92,19 @@ z-index: 2;
   
   #codetype {
 
+
 width: 101%;
 text-align: center;
 top: -5px;
 left: -1%;
 font-size:230%;
-font-family: consolas;
+font-family: Segoe UI;
 color: coral;
 position: fixed;
 text-decoration:none;
 height: 130px;
-z-index: 10;
-background-color:rgb(40,40,40);
+z-index: 1;
+background-color:rgba(0, 0, 0, 0.842);
 /*box-shadow:  0 0  10px black;*/
 border: none;
 
@@ -217,8 +192,6 @@ border: none;
   backdrop-filter: blur(10px);
   z-index: 3;
   right: 0;
-  user-select:text;
-  cursor: default;
 
 
 
@@ -268,18 +241,18 @@ width: 7px;
   
 }
 
-.watermark {
+/*.watermark {
 
  
   z-index: -2;
   vertical-align: middle; 
   left:50% ;
   top: 50%; 
-  transform: translate(-50%, -50%) scale(.40,.40); 
+  transform: translate(-50%, -50%) scale(.55,.55); 
   opacity: 13%;
  
 
-}
+}*/
 
 
 .recursion-sheet {
@@ -464,11 +437,6 @@ position: absolute;
   }
 
 
-  #infotab {
-
- z-index: 10!important;
-
-  }
   
 #infos {
   position: absolute;
@@ -480,7 +448,6 @@ position: absolute;
  transition-duration: "1000ms";
  cursor: initial;
  border-radius: 100px;
-
 }
 
 
@@ -547,7 +514,6 @@ max-height: 0;
 vertical-align: middle;
         font-size: 140%;
         opacity: 0%;
-        transition: 500ms linear;
         
     }
 
@@ -560,12 +526,14 @@ vertical-align: middle;
 }
 
 
+#exptext::first-letter {
 
-.commandcopy {
+  text-transform: uppercase;
 
-
-  cursor: default;
 }
+
+
+
 
 
 .trie {
@@ -595,345 +563,3 @@ vertical-align: middle;
     left: 17px;
   top:-5px;
     }
-
-
-    
-.slidecontainer {
-  width: 300px;
-  position: fixed;
-  right: 70px;
-  top: 330px;
-  z-index: 5;
-  
-
-}
-
-.slider {
-  -webkit-appearance: none;
-  width: 200px;
-  height: 3px;
-  border-radius: 3px;
-  background: linear-gradient(to right, gray, black);
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: linear-gradient(to left,#FF512F, #DD2476 );
-  cursor: default;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #000000;
-  cursor: pointer;
-}
-
-
-.btnode {
-position: absolute;
-top:150px;
-left:20px;
-height: 30px;
-width: 140px;
-max-width: 500px;
-
-background-color: rgba(255, 255, 255, 0);
-
-border-style: solid;
-border-color: #000;
-border-width: 2px;
-overflow-x: hidden;
-
-}
-
-
-.btnode-text {
-
-font-size: 80%;
-color : black;
-
-}
-
-
-#playlabel {
-  width: 50px;
-  height: 20px;
-  position: fixed;top: 210px;right: 300px;border-style: dashed;border-radius: 20px;text-align: center;border-width: 2px;border-color: purple;
-transition: opacity 500ms;
-  opacity: 0;
-}
-
-
-
-#pauselabel {
-  
-  width: 50px; height: 20px; position: fixed;top: 210px;right: 210px;border-style: dashed;border-radius: 20px;text-align: center;border-width: 2px;border-color: red;
-  transition: opacity 500ms;
-    opacity: 0;
-  }
-  
-
-  #plbl {
-
-
-    font-size:13px;font-family: consolas;color:purple;top: -10px;left:12px;position: absolute;
-  }
-
-
-  #palbl {
-
-
-    font-size:13px;font-family: consolas;color:red;top: -10px;left:8px;position: absolute;
-  }
-
-
-
-
-
-#stringcont {
-
-  position: absolute;
-
-display: flex;
-
-flex-direction: row;
-flex-wrap: nowrap;
-
-align-items: center;
-justify-content: center;
-
-
-transition: 1010ms linear;
-
-}
-
-#patterncont {
-
-
-  position: absolute;
-
-
-display: flex;
-
-flex-direction: row;
-flex-wrap: nowrap;
-
-align-items: center;
-justify-content: center;
-transition: 1010ms linear;
-
-}
-
-.charwords  {
-
-  background-color: coral;
-  color: white;
-  width:40px;
-  height: 40px;
-  font-size: 20px;
-  text-align: center;
-  margin: 2px;
-  transition: 1010ms linear;
-  
-}
-
-.charpatterns  {
-
-  background-color: coral;
-  color: white;
-  width:40px;
-  height: 40px;
-  font-size: 20px;
-  text-align: center;
-  margin: 2px;
-  transition: 1010ms linear;
-  
-}
-
-
-
-.charwords  > p , .charpatterns  > p {
-
-margin-top: 6px;
-
-
-}
-
-.knuthtable {
-
-position: relative;
-display: flex;
-
-flex-direction: row;
-flex-wrap: nowrap;
-
-align-items: center;
-justify-content: center;
-transition: 1010ms linear;
-
-}
-
-
-.sudo {
-
-
-  width: 60px;
-  
-  height: 60px;
- 
- overflow-y: hidden;
- 
-  background-color:rgb(255, 255, 255); 
- 
-   font-family: Segoe UI;
-   border-style: solid;
-   border-width: 1px;
-   position: relative;
-
-   border-collapse: collapse;
-   padding: .5em;  
-   border-radius: 5px;
-
-   font-size: 100%;
-  
-
-
-}
-
-.inpsudo {
-color: black;
-position: absolute;
-margin: 0;
-padding: 0;
-width: 40px;
-height: 60px;
-left:20px;
-font-size: 400%;
-background-color: transparent;
-border: none;
-
-}
-
-
-.inpsudo:focus {
-
-  outline: none;
-}
-
-
-
-.conwaycells  {
-
-  background-color: coral;
-  color: white;
-  width:10px;
-  height: 10px;
-  font-size: 20px;
-  text-align: center;
-  margin: 1px;
-  
-}
-
-
-#codetracerholder {
-
-  height: 200px;
-  width: 350px;
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  right:550px;
-  font-family: poppins;
-
-}
-
-.codecolor {
-
-  font-family: calibri;
-  font-size: 1.5em;
-  color: black;
-}
-
-.codetracerinfo {
-
-  opacity: .3;
-  font-size: 0.7em;
-}
-
-#stackanimationarea {
-  top: 200px;
-  left:10%;
-  width: 200px;
-  height: auto;
-  overflow-y: visible;
-  position: absolute;
-}
-
-#factorialstackholder {
-
-position: absolute;
-width: 150px;
-height: 50px;
-overflow-y: visible;
-top: 0px;
-display: flex;
-flex-direction: column;
-}
-
-.stackcalls {
-
-min-width: 208px;
-min-height: 109.2px;
-border: 2px red solid;
-margin: 2px;
-display: flex;
-flex-direction: column;
-opacity: 0;
-
-}
-
-.stackcalltopheader {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: blanchedalmond;
-  font-family: consolas;
-}
-
-
-.stackcallbody {
-
-  font-family: consolas;
-  background-color: aliceblue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.stackcallreturn {
-
-  margin-bottom: 2px;
-}
-
-.stackcallreturnvalue {
-
-  font-size: 15px;
-}

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+    <style>
+        * {
+            font-family: 'Segoe UI';
+        }
+
+        ::-webkit-scrollbar {
+
+            width: 7px;
+            height: 7px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: grey;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: coral;
+
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .parallex {
+
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .cont {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            z-index: 0;
+            overflow: auto;
+            box-shadow: 0px 5px 20px 20px rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+
+
+        }
+
+
+        .cont::-webkit-scrollbar {
+            display: none;
+        }
+
+        .frame {
+
+            min-width: 400px;
+
+        }
+
+        .frameimg {
+
+            background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
+            height: auto;
+            width: 100%;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            transition: 300ms linear;
+        }
+
+        .info {
+
+            position: absolute;
+            bottom: -50px;
+            left: 20px;
+            color: white;
+            z-index: 1;
+            font-size: 170%;
+            transition: 100ms ease-in;
+            transition-delay: 200ms;
+
+        }
+
+        .underliner {
+
+            width: 60%;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.74);
+            z-index: 1;
+            position: absolute;
+            bottom: 30%;
+            left: -61%;
+            transform: skewX(20deg);
+            overflow: visible;
+            transition: 200ms ease-in 300ms;
+
+
+
+        }
+
+
+        .likebtn {
+
+            position: absolute;
+            bottom: -15%;
+            left: 10%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.185);
+            border: 0;
+
+            transition: 100ms ease-in 300ms;
+        }
+
+
+
+        .sharebtn {
+
+            position: absolute;
+            bottom: -15%;
+            left: 46%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.185);
+            border: 0;
+
+            transition: 100ms ease-in 300ms;
+
+        }
+
+
+
+        .removebtn {
+
+            position: absolute;
+            bottom: -15%;
+            left: 80%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.185);
+            border: 0;
+            transition: 100ms ease-in 300ms;
+
+        }
+
+
+        .commentbtn {
+
+            position: absolute;
+            top: -20%;
+            left: 80%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.185);
+            border: 0;
+            transition: 100ms ease-in 300ms;
+
+        }
+
+
+        .closebtn {
+
+
+            position: absolute;
+            bottom: -15%;
+            left: 80%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.185);
+            border: 0;
+            transition: 100ms ease-in 800ms;
+            z-index: 3;
+
+
+
+        }
+
+        .comments {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.432);
+            z-index: 3;
+            color: white;
+            padding: 40px;
+            font-size: 150%;
+            transition: 300ms ease-in;
+            opacity: 0;
+            visibility: hidden;
+            resize: none;
+            outline: none;
+            border: none;
+
+        }
+
+        .comments::placeholder {
+            color: snow;
+            opacity: .6;
+        }
+
+        .frame:hover>.frameimg {
+
+            opacity: 1;
+        }
+
+
+        .frame:hover>.info {
+
+
+            bottom: 35%;
+        }
+
+        .frame:hover>.underliner {
+
+            left: -5px;
+        }
+
+
+        .frame:hover>.likebtn {
+
+            bottom: 5%;
+        }
+
+        .frame:hover>.sharebtn {
+
+            bottom: 5%;
+        }
+
+        .frame:hover>.removebtn {
+
+            bottom: 5%;
+        }
+
+        .frame:hover>.commentbtn {
+
+            top: 5%;
+
+        }
+
+
+
+
+        @media (max-width:800px) {
+
+            .cont {
+
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parallex" style="background-image: url('universe.jpg');">
+
+        <div
+            style="position: absolute; top: 50%;left: 50%;transform: translate(-50%,-50%);background-color:rgba(255, 250, 250, 0.288);border-radius:60px;padding:20px;text-align: center    ;">
+            <label style="font-size: 200%; color: rgb(255, 255, 255); ">Scroll Down</label>
+        </div>
+    </div>
+
+
+    <div class="cont">
+
+        <div id="f1" class="frame" style="position: relative;overflow: hidden;">
+            <img id="f1img" src="green1.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">A beautiful greeny.</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id="photo0" onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f1')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green1.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f1')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+            <textarea id="f1com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f1close" class="closebtn" onclick="closeComment('f1')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+
+
+        </div>
+
+
+        <div id="f2" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f2img" src="green2.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Marijuana</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id="photo1" onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f2')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green2.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        id="save1" style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f2')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+            <textarea id="f2com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f2close" class="closebtn" onclick="closeComment('f2')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+
+
+        <div id="f3" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f3img" src="green3.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Snow Leaves</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id='photo2' onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f3')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green3.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f3')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+
+            <textarea id="f3com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f3close" class="closebtn" onclick="closeComment('f3')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+        <div id="f4" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f4img" src="green4.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">More Greenary</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id='photo3' onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f4')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green4.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f4')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+            <textarea id="f4com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f4close" class="closebtn" onclick="closeComment('f4')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+
+        <div id="f5" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f5img" src="green5.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Tiny Leaves</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id='photo4' onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f5')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green5.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f5')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+
+            <textarea id="f5com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f5close" class="closebtn" onclick="closeComment('f5')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+    </div>
+
+
+    <div class="parallex" style="background-image: url('mountain2.jpg');height: 40%;">
+
+
+    </div>
+
+
+    <div class="cont" >
+
+        <div id="f6" class="frame" style="position: relative;width: 400px;overflow: hidden;">
+            <img id="f6img" src="build1.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Twin Towers</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id="photo5" onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f6')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="build1.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f6')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+            <textarea id="f6com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f6close" class="closebtn" onclick="closeComment('f6')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+
+
+        </div>
+
+
+        <div id="f7" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f7img" src="build2.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Glasscious!</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id="photo6" onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f7')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green2.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        id="save1" style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f7')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+            <textarea id="f7com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f7close" class="closebtn" onclick="closeComment('f7')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+
+
+        <div id="f8" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f8img" src="build3.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Burj Khalifa</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id='photo7' onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f8')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green3.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f8')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+
+            <textarea id="f8com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f8close" class="closebtn" onclick="closeComment('f8')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+        <div id="f9" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f9img" src="build4.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Up View</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id='photo8' onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f9')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green4.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f9')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+            <textarea id="f9com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f9close" class="closebtn" onclick="closeComment('f9')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+
+        <div id="f10" class="frame" style="position: relative;width:400px;overflow: hidden;">
+            <img id="f10img" src="build5.jpg" style="z-index: 0;width: 100%;height: auto;display: block;">
+
+            <div class="frameimg">
+            </div>
+
+            <label class="info">Sky Sracpping</label>
+            <div class="underliner"></div>
+            <button class="likebtn"><i class="glyphicon glyphicon-thumbs-up" style="font-size:170%;color: white;"
+                    id='photo9' onclick="addToLiked(this)"></i></button>
+            <button class="sharebtn"><i class="glyphicon glyphicon-send" onclick="shareToFacebook('f10')"
+                    style="font-size:170%;color: white;"></i></button>
+            <button class="removebtn"><a href="green5.jpg" download><i class="glyphicon glyphicon-download-alt"
+                        style="font-size:170%;color: white;"></i></a></button>
+            <button class="commentbtn" onclick="showCommentBox('f10')"><i class="glyphicon glyphicon-list-alt"
+                    style="font-size:170%;color: white;"></i></button>
+
+            <textarea id="f10com" class="comments" placeholder="Please leave a short note."></textarea>
+
+            <button id="f10close" class="closebtn" onclick="closeComment('f10')"><i class="glyphicon glyphicon-remove"
+                    style="font-size:170%;color: white;"></i></button>
+
+        </div>
+
+    </div>
+
+
+    <div class="parallex" style="background-image: url('universe.jpg');">
+
+        <div
+            style="position: absolute; top: 50%;left: 50%;transform: translate(-50%,-50%);background-color:rgba(255, 250, 250, 0.288);border-radius:60px;padding:20px;text-align: center    ;">
+            <label style="font-size: 200%; color: rgb(255, 255, 255); ">Scroll Down</label>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+
+        function closeComment(data) {
+
+
+            let allChild = document.getElementById(data).children;
+
+
+
+            allChild[9].style.transitionDelay = "100ms";
+            allChild[9].style.bottom = "-15%";
+
+            setTimeout(() => {
+                allChild[9].style.transitionDelay = "800ms";
+            }, 200)
+
+            for (let i = 2; i <= 7; i++) {
+                allChild[i].style.opacity = "1";
+            }
+
+            let commentBox = document.getElementById(data + "com");
+
+            localStorage.setItem(data + "com", commentBox.value)
+            localStorage.getItem(data + "com")
+            commentBox.style.opacity = '0';
+            commentBox.style.visibility = "hidden";
+
+
+
+
+        }
+
+
+        function showCommentBox(data) {
+
+            let commentBox = document.getElementById(data + "com");
+
+            commentBox.style.opacity = '1';
+            commentBox.style.visibility = "visible";
+
+
+
+
+            let allChild = document.getElementById(data).children;
+
+            for (let i = 2; i <= 7; i++) {
+                allChild[i].style.opacity = "0";
+            }
+
+            allChild[9].style.bottom = "5%";
+
+            setTimeout(()=> {
+                document.getElementById(data + "com").focus();
+            },100)
+            
+
+           
+
+
+        }
+
+
+        function shareToFacebook(event) {
+
+
+            let imageElement = document.getElementById(event + "img");
+
+            window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(imageElement.src), 'sharer', 'toolbar=0,status=0,width=626,height=436'); return false;
+        }
+
+
+        function addToLiked(event) {
+
+            let target = event;
+
+            if (target.style.color == "white") {
+                target.style.color = "red";
+
+                localStorage.setItem(target.id, true);
+            }
+
+
+            else {
+                target.style.color = "white";
+                localStorage.setItem(target.id, false);
+            }
+
+        }
+
+
+        window.onload = function () {
+
+
+            let photoLength = document.getElementsByClassName("frame").length;
+
+
+            for (let i = 0; i < photoLength; i++) {
+
+
+                let getIdStatus = localStorage.getItem("photo" + i);
+
+                let getComment = localStorage.getItem(`f${(i + 1)}com`)
+
+                if (getIdStatus == "true") {
+
+                    document.getElementById("photo" + i).style.color = "red";
+
+                }
+
+                if (getComment != null) {
+
+                    document.getElementById(`f${i + 1}com`).value = getComment;
+
+                }
+
+
+
+                else {
+                    continue;
+                }
+
+
+            }
+
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

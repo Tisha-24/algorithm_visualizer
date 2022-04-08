@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>Data Structures Visualization</title>
-   <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Data Structures Vizualization."/>
+
+<title>ALGORITHM VISUALIZER</title>
+
+<link rel="manifest" href="manifest.json" />
+<script type="module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+  const el = document.createElement('pwa-update');
+  document.body.appendChild(el);
+</script>
+
+<script type='text/javascript'>
+
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/pwabuilder-sw/pwabuilder-sw.js')
+             .then(function() { console.log("Service Worker Registered"); });
+  }
+  
+  </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BK8TV34GJW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BK8TV34GJW');
+</script>
+
+	
+<meta name="description" content="Data Structures Visualization"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://graphicalstructure.org/" />
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Data Structures Visualization">
-<meta property="og:description" content="Data Structures Visualization.">
+<meta property="og:description" content="Data Structures Visualization">
 <meta property="og:url" content="https://graphicalstructure.org">
 <meta property="og:site_name" content="Data Structures Visualization">
 <meta name="twitter:card" content="summary_large_image">
@@ -59,443 +86,567 @@
         }
     ]
 }</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185226808178747" crossorigin="anonymous"></script>
+	<!-- </ANIRBAN ROY SEO> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/themify-icons.css">
+  <link rel="stylesheet" href="/css/linearicons-style.css">
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/css/owl.caraousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="img\favicon.png" type="image/png" sizes="16x16">
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
- * {
-	 box-sizing: border-box;
-	 font-weight: normal;
-}
+  <link rel="stylesheet" href="/css/style.css">
 
- body {
-	 color: #555;
-	 background: #fff;
-	 text-align: center;
-	 font-family: 'segoe ui';
-	 padding: 1em;
-}
- h1 {
-	 font-size: 2.2em;
-}
- .flip {
-	 position: relative;
-}
- .flip > .front, .flip > .back {
-	 display: block;
-	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	 transition-duration: 1s;
-	 transition-property: transform, opacity;
-}
- .flip > .front {
-	 transform: rotateY(0deg);
-}
- .flip > .back {
-	 position: absolute;
-	 opacity: 0;
-	 top: 0px;
-	 left: 0px;
-	 width: 100%;
-	 height: 100%;
-	 transform: rotateY(-180deg);
-}
- .flip:hover > .front {
-	 transform: rotateY(180deg);
-}
- .flip:hover > .back {
-	 opacity: 1;
-	 transform: rotateY(0deg);
-}
- .flip.flip-vertical > .back {
-	 transform: rotateX(-180deg);
-}
- .flip.flip-vertical:hover > .front {
-	 transform: rotateX(180deg);
-}
- .flip.flip-vertical:hover > .back {
-	 transform: rotateX(0deg);
-}
- .flip {
-	 position: relative;
-	 display: inline-block;
-	 margin-right: 2px;
-	 margin-bottom: 1em;
-	 width: 400px;
-}
- .flip > .front, .flip > .back {
-	 display: block;
-	 color: coral;
-	 width: inherit;
-	 background-size: cover !important;
-	 background-position: center !important;
-	 height: 220px;
-	 padding: 1em 2em;
-	 background: #313131;
-	 border-radius: 10px;
-}
- .flip > .front p, .flip > .back p {
-	 font-size: 0.9125rem;
-	 line-height: 160%;
-	 color: #999;
-}
- .text-shadow {
+  <style>
+    body{
+      background-color: rosybrown;
+    }
+    #playIMG{
+      margin-top: 100px;
+    }
+    #learnGo{
+      margin-top:60px; margin-left: 25%; float:left; color:black; font-size: 80px; width:300px; text-align: left;
+    }
+    #androidapp{
+      text-align: center; margin-top: 100px; height: 300px;
+    }
+    @media (max-width: 767px) {
+      .section-padding--small{
+        padding-top:200px;
+      }
+      #playIMG{
+        margin-top: 50px;
+      }
+      #learnGo{
+        margin-left:20px;
+      }
+    #androidapp{
+      text-align: center; margin-top: 100px; height: 300px;
+    }
+      #donationBox{
+        left: 10% !important;
+        width:auto;
+      }
+      #plzDonate{
+        width:auto;
+      }
+    }
 
-position: absolute;
+    #blur-background{
+      backdrop-filter: blur(2px);
+          background:rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 888888888;
+    }
 
+    #ytvideo{
+      width: 100%;
+      height: 400px;
 
+    }
 
-}
+    html{
+      scroll-behavior: smooth;
+    }
 
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-
+  </style>
+	
 </head>
+	
 <body>
-  <!-- horizontal
 
-<h4>Horizontal Flip</h4>
-<div class="flip">
-    <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
-       <h1 class="text-shadow">MOUNTAIN</hi>
-    </div>
-    <div class="back">
-       <h2>Angular</h2>
-       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
-    </div>
-</div>
-<div class="flip">
-    <div class="front" style="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
-       <h1 class="text-shadow">LAKE</hi>
-    </div>
-    <div class="back">
-       <h2>Angular</h2>
-       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
-    </div>
-</div>
-<div class="flip">
-    <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
-       <h1 class="text-shadow">OCEAN</hi>
-    </div>
-    <div class="back">
-       <h2>Angular</h2>
-       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
-    </div>
-</div>
+  <!-- Blur Background When YT Modal Is On -->
+  <div id="blur-background" class="blur-background"></div>
+	
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html" style="color: white; font-size: 5vw; font-weight: 900;">Graphical  Structure</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <!--<li class="nav-item"  style="color: white;"><a style="cursor: pointer;" class="nav-link" onClick="isMobile()?window.open('https://www.buymeacoffee.com/gStructure') : openDonationBox()">Donate</a></li>-->
+             
+               <!-- <li class="nav-item"  style="color: white;"><a href="#ytvideo" style="cursor: pointer;" class="nav-link" >How To Use?</a></li> -->
+          
+            </ul>
 
-<br>
-<br>
+            <ul class="navbar-right">
+              <li class="nav-item">
+                <button class="button button-header bg" onclick="location.href='/Playground';"><a href="/Playground">Play Ground</a></button>
+              </li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
 
-vertical -->
-<div style="text-align: center;">
-<h1 onClick="location.href='/'" style="cursor:pointer; font-size:60px; font-weight: 900; font-family: 'Roboto', sans-serif;">Graphical Structure</h1>
-</div>
-<section id="mainbody">
-<!--<div class="flip flip-vertical" onclick="location.href='./Conway';">
-   <div class="front" style="text-align: center;" >
-      <h1 class="text-shadow">Conway's Game of Life</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/Conway.png)">-->
+
+
+
+  <main class="side-main">
       
-      
-   </div>
- </div>
-
-<div class="flip flip-vertical" onclick="location.href='./Array';">
-
-    <div class="front">
-       <h1 class="text-shadow">Array</h1>
-    </div>
-    <div class="back"  style="background-image: url(thumbnails/array.png)">
-    
-    </div>
-</div>
-
-
-<div class="flip flip-vertical" onclick="location.href='./SortBars';">
-
-   <div class="front">
-      <h1 class="text-shadow">Sorting (Bar Graph)</h1>
-   </div>
-   <div class="back"  style="background-image: url(thumbnails/bar.png)">
-   
-   </div>
-</div>
-
-
-
-<div class="flip flip-vertical" onclick="location.href='./LinkedList';">
-    <div class="front">
-       <h1 class="text-shadow">Linked List</h1>
-    </div>
-    <div class="back" style="background-image: url(thumbnails/LL.png)">
-
-    </div>
-</div>
-
-
-<div class="flip flip-vertical" onclick="location.href='./Stack';" >
-    <div class="front" >
-       <h1 class="text-shadow">Stack</h1>
-    </div>
-    <div class="back" style="background-image: url(thumbnails/stackll.png)">
-       
-       
-    </div>
-</div>
-
-<div class="flip flip-vertical" onclick="location.href='./Queue';">
-  <div class="front" >
-     <h1 class="text-shadow">Queue</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/queuell.png)">
-     
-     
-  </div>
-</div>
-
-
-
-<div class="flip flip-vertical" onclick="location.href='./BST';" >
-    <div class="front" >
-       <h1 class="text-shadow">Binary Search Tree</h1>
-    </div>
-    <div class="back" style="background-image: url(thumbnails/BST.png)">
-       
-       
-    </div>
-</div>
-
-
-<!--<div class="flip flip-vertical" onclick="location.href='./AVL';">
-  <div class="front" >
-     <h1 class="text-shadow">AVL Tree</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/avl.png)">-->
-     
-     
-  </div>
-</div>
-
-<!--<div class="flip flip-vertical" onclick="location.href='./Splay';">
-  <div class="front" >
-     <h1 class="text-shadow">Splay Tree</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/splay.png)">-->
-     
-     
-  </div>
-<!--</div><div class="flip flip-vertical" onclick="location.href='./RedBlack';">
-  <div class="front" >
-     <h1 class="text-shadow">Red Black Tree</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/rb.png)">-->
-     
-     
-  </div>
-</div><div class="flip flip-vertical" onclick="location.href='./BTree';">
-  <div class="front" >
-     <h1 class="text-shadow">B Tree</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/btree.png)">
-     
-     
-  </div>
-</div>
-
-
-<div class="flip flip-vertical" onclick="location.href='./Heap';">
-  <div class="front" >
-     <h1 class="text-shadow">Max Heap</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/heap.png)">
-     
-     
-  </div>
-</div>
-
-
-<div class="flip flip-vertical" onclick="location.href='./MinHeap';">
-   <div class="front" >
-      <h1 class="text-shadow">Min Heap</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/minheap.png)">
-      
-      
-   </div>
- </div>
+    <!--================ Hero sm Banner start =================-->      
+    <section class="hero-banner mb-30px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="hero-banner__img">
+              <img class="img-fluid" src="img\hero-banner.png" style="border-radius: 50px;" >
+            </div>
+          </div>
+          <div class="col-lg-5 pt-5">
+            <div class="hero-banner__content">
+              <h1>Data Structures and Algorithms visualization</h1>
+              <p>With Graphical Structure, you can visualise data structures and algorithms in a fun way to understand the concepts thoroughly.</p>
+              <a class="button bg" href="\Playground">Let's Play!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero sm Banner end =================-->
  
+    
+    
+    <!--================ Offer section start =================-->      
+    <section class="section-margin">
+      <div class="container">
 
+        <!-- section intro title about how to use graphical structure -->
+        <div class="section-intro pb-85px text-center">
+        <!--<h2 class="section-intro__title"> How To Use Graphical Structure ?</h2>-->
+        <!--<iframe id="ytvideo" src="https://www.youtube-nocookie.com/embed/Js_RboNRf4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        </div>
 
-<div class="flip flip-vertical" onclick="location.href='./Priorityqueue';">
-  <div class="front" >
-     <h1 class="text-shadow">Priority Queue</h1>
+        <div class="section-intro pb-85px text-center">
+          <h2 class="section-intro__title">Cool Graphical Structure Features</h2>
+          <p class="section-intro__subtitle">At Graphical Structure, we focus on building and providing the best possible user experience to the learners. Thus, we keep developing innovative tools and features that would make learning easier and more fun!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <div class="row offer-single-wrapper">
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <span class="offer-single__icon">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                  <h4>Codes List</h4>
+                  <p>To help you create data structures before running the algorithms!</p>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <span class="offer-single__icon">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                  </span>
+                  <h4>Easy Drag And Drop</h4>
+                  <p>Each and every data structure you create, can be dragged and reshaped just the way you like!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row offer-single-wrapper">
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <span class="offer-single__icon">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                  </span>
+                  <h4>Play/Pause Ability</h4>
+                  <p>Play/Pause the algorithms in real time!</p>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 offer-single">
+                <div class="card offer-single__content text-center">
+                  <span class="offer-single__icon">
+                    <i class="fa fa-fast-forward" aria-hidden="true"></i>
+                  </span>
+                  <h4>Speed Controller</h4>
+                  <p>Control the speed at which the algorithms are executed, to learn at your own pace!</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="offer-single__img">
+              <img class="img-fluid" src="/img/offer.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Offer section end =================-->  
+    
+    <!--================ Feature section start =================-->      
+  
+    <!--<section class="section-margin">
+      <div class="container">
+        <div class="section-intro pb-85px text-center">
+          <h2 class="section-intro__title">Meet The Devs!</h2>-->
+          <!--<p class="section-intro__subtitle">These are the people who contributed in the making of Graphical Structure.</p>
+        </div>-->
+
+        <!--<div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+                <span>
+                  <img src="https://graphicalstructure.org/125266565_1269849923377788_3773758659451175728_n.png" style="border-radius: 500px; height: 200px;">-->
+               
+               <!--<br/><br/>   <h3><a href="mailto:therain0605@gmail.com"><b>Anoop Singh</b></a></h3>-->
+               <!--<p>Lead developer. Programmed all the Data structures, Algorithms, Animations and the Playground.</p>
+                </span>
+              </div>
+            </div>-->
+           <!--- <div class="col-lg-4">
+              <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+                <span>
+                  <img src="https://techrbun.com/wp-content/uploads/2019/11/Anirban2BRoy.png" style=" border-radius: 500px; height: 200px;">-->
+               
+                  <!--<br/><br/><br/><br/>   <h3><a href="https://www.techrbun.com/author/anirban/" target="_blank"><b>Anirban Roy</b></a></h3>-->
+                  <!--<p>Top Contributor. Full-Stack Developer And SEO Expert.</p>
+                </span>
+                
+              </div>
+            </div>-->
+           <!--<div class="col-lg-4" style="text-align:center">
+              <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+                <span style="display: block; margin-left: auto; margin-right: auto;" class="card-feature__icon">
+                  <i class="fa fa-code" aria-hidden="true"></i>-->
+                </span>
+                <!--<h3 style="display: block; margin-left: auto; margin-right: auto;" class="card-feature__title">Wanna contribute?</h3>-->
+                <!--<p style="display: block; margin-left: auto; margin-right: auto;" class="card-feature__subtitle"><a style="color:white!important;background-color: coral!important;" class="button bg" href="https://github.com/Technopark95/Graphical-Structure" target="_blank"><b>GitHub Repository</b></a></p>
+                <br>
+                <p style="display: block; margin-left: auto; margin-right: auto;" class="card-feature__subtitle"><a style="color:white!important;background-color: coral!important;" class="button bg" href="https://www.buymeacoffee.com/gStructure" target="_blank"><b>Donate</b></a></p>
+             
+              </div>
+            </div>-->
+          
+          </div>
+        </div>
+      </div>
+
+      <div id="androidapp">
+        <div>
+          <h2 id="learnGo">Learn On The Go!</h2>
+   <!-- <a  href='https://play.google.com/store/apps/details?id=org.graphicalstructure.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img id="playIMG" width="300px" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+        </div>
+        <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>-->
+      </div>
+    </section>
+    <!--================ Solution section start =================-->      
+    <section style="background: inherit;" class="section-padding--small bg-magnolia">
+      
+    </div>
   </div>
-  <div class="back" style="background-image: url(thumbnails/pq.png)">
-     
-     
-  </div>
-</div><div class="flip flip-vertical" onclick="location.href='./Graph';">
-  <div class="front" >
-     <h1 class="text-shadow">Graph</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/graph.png)">
-     
-     
-  </div>
-<!--</div><div class="flip flip-vertical" onclick="location.href='./Trie';">
-  <div class="front" >
-     <h1 class="text-shadow">Trie</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/trie.png)">-->
-     
-     
-  </div>
+      <div class="container">
+        <div class="row align-items-center pt-xl-3 pb-xl-5">
+          <div class="col-lg-6">
+            <div class="solution__img text-center text-lg-left mb-4 mb-lg-0">
+             <!-- <img class="img-fluid" src="/img/solution.png"  alt="GitHub OctoCat">-->
+            </div>
+          </div>
+        
+          <div class="col-lg-6">
+            <div class="solution__content">
+              <!--<h2>Without Github, Graphical Structure wouldn't have been possible!</h2>
+              <p>We're truly greatful to GitHub for their amazing <a href="https://education.github.com/pack" target="_blank">Student Developer Pack</a> and their free hosting environment - <a href="https://pages.github.com/" target="_blank">GitHub Pages.</a></p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="copyright" style="color:black; padding-left: 25px;">
+           
+      </p>
+    </section>
+    
+   
+				<div style="display: none;" class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-dribbble"></i></a>
+					<a href="#"><i class="fab fa-behance"></i></a>
+				</div>
+			</div>
+		</div>
+  </footer>
+ 
+  <!-- ================ End footer Area ================= -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.ajaxchimp.min.js"></script>
+  <script src="/js/mail-script.js"></script>
+  <script src="/js/main.js"></script>
+
+	
+	<!-- WINTER -->
+	<style>
+  #snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+  }
+
+  .snowflake {
+	  color: #fff!important;
+    position: fixed;
+    background-color: #fff!important;
+	  opacity:1 !important;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+</style>
+
+<div id="snowflakeContainer">
+  <span class="snowflake"></span>
 </div>
 
-<div class="flip flip-vertical" onclick="location.href='./TOH';">
-   <div class="front" style="text-align: center;" >
-      <h1 class="text-shadow">Tower of Hanoi problem</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/toh.png)">
-      
-      
-   </div>
- </div>
+<script>
+  // Array to store our Snowflake objects
+  var snowflakes = [];
+
+  // Global variables to store our browser's window size
+  var browserWidth;
+  var browserHeight;
+
+  // Specify the number of snowflakes you want visible
+  var numberOfSnowflakes = 50;
+
+  // Flag to reset the position of the snowflakes
+  var resetPosition = false;
+
+  // Handle accessibility
+  var enableAnimations = false;
+  var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
+
+  // Handle animation accessibility preferences 
+  function setAccessibilityState() {
+    if (reduceMotionQuery.matches) {
+      enableAnimations = false;
+    } else { 
+      enableAnimations = true;
+    }
+  }
+  setAccessibilityState();
+
+  reduceMotionQuery.addListener(setAccessibilityState);
+
+  //
+  // It all starts here...
+  //
+  function setup() {
+    if (enableAnimations) {
+      window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
+      window.addEventListener("resize", setResetFlag, false);
+    }
+  }
+  setup();
+
+  //
+  // Constructor for our Snowflake object
+  //
+  function Snowflake(element, speed, xPos, yPos) {
+    // set initial snowflake properties
+    this.element = element;
+    this.speed = speed;
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.scale = 1;
+
+    // declare variables used for snowflake's motion
+    this.counter = 0;
+    this.sign = Math.random() < 0.5 ? 1 : -1;
+
+    // setting an initial opacity and size for our snowflake
+    this.element.style.opacity = (.1 + Math.random()) / 3;
+  }
+
+  //
+  // The function responsible for actually moving our snowflake
+  //
+  Snowflake.prototype.update = function () {
+    // using some trigonometry to determine our x and y position
+    this.counter += this.speed / 5000;
+    this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
+    this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
+    this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20);
+
+    // setting our snowflake's position
+    setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
+
+    // if snowflake goes below the browser window, move it back to the top
+    if (this.yPos > browserHeight) {
+      this.yPos = -50;
+    }
+  }
+
+  //
+  // A performant way to set your snowflake's position and size
+  //
+  function setTransform(xPos, yPos, scale, el) {
+    el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
+  }
+
+  //
+  // The function responsible for creating the snowflake
+  //
+  function generateSnowflakes() {
+
+    // get our snowflake element from the DOM and store it
+    var originalSnowflake = document.querySelector(".snowflake");
+
+    // access our snowflake element's parent container
+    var snowflakeContainer = originalSnowflake.parentNode;
+    snowflakeContainer.style.display = "block";
+
+    // get our browser's size
+    browserWidth = document.documentElement.clientWidth;
+    browserHeight = document.documentElement.clientHeight;
+
+    // create each individual snowflake
+    for (var i = 0; i < numberOfSnowflakes; i++) {
+
+      // clone our original snowflake and add it to snowflakeContainer
+      var snowflakeClone = originalSnowflake.cloneNode(true);
+      snowflakeContainer.appendChild(snowflakeClone);
+
+      // set our snowflake's initial position and related properties
+      var initialXPos = getPosition(50, browserWidth);
+      var initialYPos = getPosition(50, browserHeight);
+      var speed = 5 + Math.random() * 40;
+
+      // create our Snowflake object
+      var snowflakeObject = new Snowflake(snowflakeClone,
+        speed,
+        initialXPos,
+        initialYPos);
+      snowflakes.push(snowflakeObject);
+    }
+
+    // remove the original snowflake because we no longer need it visible
+    snowflakeContainer.removeChild(originalSnowflake);
+
+    moveSnowflakes();
+  }
+
+  //
+  // Responsible for moving each snowflake by calling its update function
+  //
+  function moveSnowflakes() {
+
+    if (enableAnimations) {
+      for (var i = 0; i < snowflakes.length; i++) {
+        var snowflake = snowflakes[i];
+        snowflake.update();
+      }      
+    }
+
+    // Reset the position of all the snowflakes to a new value
+    if (resetPosition) {
+      browserWidth = document.documentElement.clientWidth;
+      browserHeight = document.documentElement.clientHeight;
+
+      for (var i = 0; i < snowflakes.length; i++) {
+        var snowflake = snowflakes[i];
+
+        snowflake.xPos = getPosition(50, browserWidth);
+        snowflake.yPos = getPosition(50, browserHeight);
+      }
+
+      resetPosition = false;
+    }
+
+    requestAnimationFrame(moveSnowflakes);
+  }
+
+  //
+  // This function returns a number between (maximum - offset) and (maximum + offset)
+  //
+  function getPosition(offset, size) {
+    return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
+  }
+
+  //
+  // Trigger a reset of all the snowflakes' positions
+  //
+  function setResetFlag(e) {
+    resetPosition = true;
+  }
+</script>
+<!-- copyright -->
+	<script>
+    document.getElementById("copyright").innerHTML = "&nbsp;&copy; Graphical Structure "+new Date().getFullYear()+". All Rights Reserved.";
+  </script>
+  <!-- Donation Floating Box -->
+<div style="position: fixed;
+top: 50%;
+text-align: center;
+left:50%;
+transform: translate(-50%, -50%);
+z-index: 999999999; display:none;" id="donationBox">
+<div onclick="closeDonationBox()" title="Close" style="font-weight: bold; background-color:white; color:black; padding:5px; cursor: pointer; font-size:20px;">&times;</div>
+  <div id="plzDonate" style="background-color: rgba(0,0,0,0.33); border: #fff 1px solid;">
+
+    <div class="custom-model-wrap">
+      <div class="pop-up-content-wrap">
+      <h2 style="color:white; padding:50px;"><b><u>Support The Creators Of Graphical Structure</u></b></h2><br>
+      <div style="text-align:center; margin-bottom: 20px;">
+      <a onclick="closeDonationBox()" href="https://www.buymeacoffee.com/gStructure" target="_blank"><img style=" box-shadow: 0 -6px 8px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.6);
+        border-radius: 50px;  cursor:pointer;" src="/plzdonate.png"></a>
+      </div>
+      </div>
+      </div>
 
 
- <div class="flip flip-vertical" onclick="location.href='./FactRecursion';">
-   <div class="front" style="text-align: center;" >
-      <h1 class="text-shadow">Factorial (Recursion)</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/placehold.png)">
-      
-      
-   </div>
- </div>
-
-
-
-<!--<div class="flip flip-vertical" onclick="location.href='./ShuntingYard';">
-  <div class="front" >
-     <h1 class="text-shadow">Shunting-Yard Algorithm</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/sy.png)">
-     
-     
   </div>
 </div>
+<script>
+function closeDonationBox() {
+  document.body.style.overflow = "auto";
+  document.getElementById("donationBox").style.display = "none";
+  document.getElementById("blur-background").style.display="none";
+}
 
-<div class="flip flip-vertical" onclick="location.href='./Huffman';">
-   <div class="front" >
-      <h1 class="text-shadow">Huffman Coding</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/huff.png)">
-      
-      
-   </div>
- </div>
+function openDonationBox() {
+  document.getElementById('donationBox').style.display = 'block'; 
+  document.getElementById('blur-background').style.display='block'; 
+  document.body.style.overflow='hidden';
+}
 
-
- <div class="flip flip-vertical" onclick="location.href='./naiveSM';">
-   <div class="front" >
-      <h1 class="text-shadow">Naïve String Matching Algorithm</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/nsm.png)">
-      
-      
-   </div>
- </div>
+function isMobile() {
+  return (screen.width <= 768);
+}
 
 
-<div class="flip flip-vertical" onclick="location.href='./RabinKarp';">
-   <div class="front" >
-      <h1 class="text-shadow">Rabin-Karp Algorithm</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/RK.png)">
-      
-      
-   </div>
- </div>
-
- <div class="flip flip-vertical" onclick="location.href='./KnuthMorris';">
-   <div class="front" >
-      <h1 class="text-shadow">Knuth-Morris-Pratt</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/KMP.png)">
-      
-      
-   </div>
- </div>
-
-
- <div class="flip flip-vertical" onclick="location.href='./BoyerMoore';">
-   <div class="front" >
-      <h1 class="text-shadow">Boyer-Moore Algorithm</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/Boyer.png)">
-      
-      
-   </div>
- </div>-->
-
-
-<div class="flip flip-vertical" onclick="location.href='./DP';">
-  <div class="front" style="text-align: center;" >
-     <h1 class="text-shadow">Dynamic<br>Programming</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/dp.png)">
-     
-     
-  </div>
-</div>
-
-<!--<div class="flip flip-vertical" onclick="location.href='./CORDIC';">
-   <div class="front" style="text-align: center;" >
-      <h1 class="text-shadow">CORDIC<br>Algorithm</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/volder.png)">-->
-      
-      
-   </div>
- </div>
-
-
-<div class="flip flip-vertical" onclick="location.href='./nQueen';">
-   <div class="front" style="text-align: center;" >
-      <h1 class="text-shadow">N Queen | Backtrack</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/nqueen.png)">
-      
-      
-   </div>
- </div>
-
-
- <div class="flip flip-vertical" onclick="location.href='./Sudoku';">
-   <div class="front" style="text-align: center;" >
-      <h1 class="text-shadow">Sudoku | Backtrack</h1>
-   </div>
-   <div class="back" style="background-image: url(thumbnails/sudoku.png)">
-      
-      
-   </div>
- </div>
-
-
-
-<!--<div class="flip flip-vertical" onclick="location.href='./TreeAdjustmentAlgorithm';">
-  <div class="front" style="text-align: center;" >
-     <h1 class="text-shadow">Tree Adjustment Algorithm<br>(Explaination)</h1>
-  </div>
-  <div class="back" style="background-image: url(thumbnails/adjust.png)">-->
-     
-     
-  </div>
-</div>
-
-</section>
+ </script>
 </body>
-</html> 
+</html>

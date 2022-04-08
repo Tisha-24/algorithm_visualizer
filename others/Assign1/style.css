@@ -1,0 +1,204 @@
+html,body {
+
+    height: 100%;
+   width: 98%;
+
+   margin: 10px;
+   margin-bottom: 50px;
+
+  
+}
+
+
+ *{
+     font-family: 'Segoe UI';
+ }
+
+
+
+.inputfield {
+
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: rgba(0, 0, 0,0.589);
+    
+}
+
+
+.textboxarea {
+
+    width: 100%;
+    padding-top: 10px ;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    outline: none;
+    position: relative;
+    font-size: 105%;
+
+ background-color: rgba(0, 0, 0,0.589);
+ color: white;
+
+
+}
+
+
+.labels {
+
+    position: absolute;
+    top: 15px;
+    left:10px;
+    color: rgb(129, 129, 129);
+    z-index: 1;
+    font-size: larger;
+    transition: all 200ms ease-in;
+
+}
+
+
+.underliner {
+
+    width: 100%;
+    height: 1.5px;
+background-color: rgb(95, 95, 95);
+}
+
+/* 
+.inputfield:hover> .labels {
+    
+top:0px;
+font-size: 10px;
+color: rgb(0, 103, 221);
+
+
+}
+ */
+
+
+ .optionallinks {
+
+    margin: 5px;
+ }
+
+ a {
+
+    text-decoration: none;
+    outline: none;
+    color: tomato;
+ }
+
+
+ #messageph::placeholder {
+
+    color: rgba(255, 127, 80, 0.425);
+ }
+
+
+ img {
+
+    cursor: pointer;
+ }
+
+    #emailinput {
+        width: 400px;
+
+      }
+
+
+ ::-webkit-scrollbar {
+
+    width: 7px;
+      height: 7px;
+      cursor: default;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgb(255, 255, 255); 
+      border-radius: 10px;
+      cursor: default;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(201, 201, 201); 
+      cursor: default;
+    }
+
+     #tofieldtextinput {
+    width:87%;
+      }
+
+    @media (max-width:800px) {
+      
+  
+
+      #sendbtn {
+        width: 100%!important;
+      }
+
+      #attachbtn {
+        margin-left: 5px!important;
+      }
+
+      #bottomwraper {
+
+        justify-content: space-between;
+        
+      }
+
+
+      #emailinput {
+        width:200px;
+      }
+
+    }
+
+
+    #messageph {
+      margin-top: 10px;
+      width: 97%;
+      outline: none;
+      border:0;
+       height:360px;
+      font-size: 105%;
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 20px;
+      overflow: scroll;
+    }
+
+    .indictors {
+
+
+      width:70px;
+      height: auto;
+      border:blueviolet 1px solid;
+      position: absolute;
+      right: 10px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+
+
+.emailtemplate {
+  display:inline-block; width: fit-content;
+            padding:9px;border-radius:30px;margin: 0;
+         
+}
+
+
+.outeremail {
+
+  display: flex; width: fit-content;position: relative;
+  width: fit-content;
+  background-color: snow;
+  border-radius: 60px;
+  margin-left: 10px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  color: black;
+}
